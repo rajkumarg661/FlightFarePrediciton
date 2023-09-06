@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date-Time and Select Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightskyblue;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color:lightblue;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="datetime-local"],
+        select {
+            width: 100%;
+            padding: 1px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Flight Fare Prediction App</h2>
+        <form action="\predict" method="post">
+            <div class="form-group">
+                <label for="datetime1">Departure Date</label>
+                <input type="datetime-local" name="Dep_Time" id="Dep_Time" required="required">
+            </div>
+            <div class="form-group">
+                <label for="datetime2">Arrival Date</label>
+                <input type="datetime-local" name="Arrival_Time" id="Arrival_Time" required="required">
+            </div>
+            <div class="form-group">
+                <label for="select1">Source</label>
+                <select name="Source" id="Source" required="required">
+                    <option value="Delhi">Delhi</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Chennai">Chennai</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select2">Destination</label>
+                <select name="Destination" id="Destination" required="required">
+                    <option value="Cochin">Cochin</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="New Delhi">New Delhi</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Kolkata">Kolkata</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select3">Stopage</label>
+                <select name="stops" required="required">
+                    <option value="0">Non-Stop</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select4">Select Your Favourite Airline</label>
+                <select name="airline" id="airline" required="required">
+                    <option value="Jet Airways">Jet Airways</option>
+                    <option value="IndiGo">IndiGo</option>
+                    <option value="Air India">Air India</option>
+                    <option value="Multiple carriers">Multiple carriers</option>
+                    <option value="SpiceJet">SpiceJet</option>
+                    <option value="Vistara">Vistara</option>
+                    <option value="Air Asia">Air Asia</option>
+                    <option value="GoAir">GoAir</option>
+                    <option value="Jet Airways Business">Jet Airways Business</option>
+                    <option value="Vistara Premium economy">Vistara Premium economy</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <h3>{{ prediction_text }}</h3>
+       <marquee> <p style="text-align: right;">©2023 Rajkumar Gupta @113</p></marquee>
+    </div>
+</body>
+</html>
