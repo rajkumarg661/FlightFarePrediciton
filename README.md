@@ -35,6 +35,6 @@ VSCode
 78-79%
 
 ### Deployed:
-Deployed on AWS --
+Deployed on AWS --  http://flightfare-env.eba-cfxk2gnm.us-east-1.elasticbeanstalk.com/
 
 # Thanks!!!
